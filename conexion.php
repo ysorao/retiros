@@ -3,7 +3,7 @@
 $server = '10.99.1.77';
 $database = 'APLICACIONES';
 $user = 'usr_ausentismos';
-$pass = '4Au$s3Ent1I$mo0oS';
+$pass = '4Au$s3Ent1I$mo0oSApp';
 
 // $server = 'DEVELOPMENT\SQLEXPRESS';
 // $database = 'APLICACIONES';
