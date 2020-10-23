@@ -1,6 +1,6 @@
 <?php 
 
-$server = '10.99.1.77';
+$server = '10.99.11.77';
 $database = 'APLICACIONES';
 $user = 'usr_ausentismos';
 $pass = '4Au$s3Ent1I$mo0oSApp';
