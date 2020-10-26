@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- <script src="js/jquery-3.4.1.js"></script> -->
-    <script src="js/app.js"></script>
+ 
+    <script src="app.js"></script>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $(document).ready(function(){
           $("input:checkbox").change(function() { 
               if($(this).is(":checked")) { 
@@ -27,7 +28,7 @@
               }
           }); 
       });
-  </script>
+  </script> -->
 
 
 </head>
@@ -165,8 +166,8 @@
         <!--  SECCION -->
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p>A continuación, encontrará una serie de preguntas que solicitamos responda de manera honesta. Sus respuestas serán tratadas de forma confidencial.</p>
-            <strong><p>¿Cuál es el principal motivo por el que decide dejar de trabajar en HeOn?</p></strong>
+            <p class="alert alert-primary">A continuación, encontrará una serie de preguntas que solicitamos responda de manera honesta. Sus respuestas serán tratadas de forma confidencial.</p>
+            <strong><p>1. ¿Cuál es el principal motivo por el que decide dejar de trabajar en HeOn?</p></strong>
           </div>
         </div>
 
@@ -246,7 +247,7 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="oportunidad"  name="oportunidad" value="oportunidad">
+              <input onclick="mejop()" class="form-check-input" type="checkbox" id="oportunidad"  name="oportunidad" value="oportunidad">
               <label class="form-check-label" for="oportunidad">
                 Mejor oportunidad laboral
               </label>
@@ -281,8 +282,8 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="salario"  name="salario"  value="salario">
-              <label class="form-check-label" for="salario">
+              <input onclick="remun()" class="form-check-input" type="checkbox" id="salario"  name="salario"  value="salario">
+              <label   class="form-check-label" for="salario">
                 Remuneración /Salario
               </label>
             </div>
@@ -310,117 +311,72 @@
           </div>
         </div>
         <hr>
+
         <div class="form-row">
-          <div class="form-group col-md-12">
+          <div id="preg13" class="form-group col-md-12 d-none">
             <p><strong>Teniendo en cuenta que uno de los Motivos fue: Mejor Oportunidad Laboral, agradecemos seleccionar una de las siguientes opciones y responder:</strong></p>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="mejorOferta" name="mejorOferta">
-              <label class="form-check-label" for="mejorOferta">Otra organización le ofreció una mejor oferta laboral que no había solicitado</label>
-            </div>
+
+            <select class="form-control" name="mejorOferta" id="mejorOferta" onChange="ofert()">
+              <option></option>
+              <option>Otra organización le ofreció una mejor oferta laboral que no había solicitado</option>
+              <option>¿Fue el resultado de una búsqueda activa?</option>
+              <option>Otro</option>
+            </select>
           </div>
          
-          <div class="form-group col-md-12">
-            ¿Porque fue atractiva la oferta? 
-            <textarea id="porqueOferta" class="form-control" rows="1"  name="porqueOferta"></textarea>
+          <div  id="porqueOferta" class="form-group col-md-12 d-none">
+            <p id="dinamPreg">¿Porque fue atractiva la oferta? </p>
+            <textarea class="form-control" rows="1"  name="porqueOferta" > </textarea>
           </div>
         </div>
+        <hr>
 
+
+
+       <!-- pregunta -->
         <div class="form-row">
-          <div class="form-group col-md-12">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="ofertaBusqueda" name="ofertaBusqueda">
-              <label class="form-check-label" for="ofertaBusqueda">¿Fue el resultado de una búsqueda activa?</label>
-            </div>
-          </div>
-          
-          <div class="form-group col-md-12">
-            Especifique el motivo que lo impulso a realizar la búsqueda 
-            <textarea id="motivoBusqueda" class="form-control" rows="1"  name="motivoBusqueda"></textarea>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="ofertaOtro" name="ofertaOtro">
-              <label class="form-check-label" for="ofertaOtro">Otro</label>
-            </div>
-          </div>
-          
-          <div class="form-group col-md-12">
-            Cual?
-            <textarea id="ofertaCual" class="form-control" rows="1"  name="ofertaCual"></textarea>
-          </div>
-        </div>
-
-
-
-        <div class="form-row">
-          <div class="form-group col-md-12">
+          <div id="preg14" class="form-group col-md-12 d-none">
             <p><strong>Teniendo en cuenta que uno de los Motivos fue Remuneración/Salario, agradecemos seleccionar una de las siguientes opciones y responder:</strong></p>
 
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="salarioSuperior" value="salarioSuperior" name="salarioprop">
-              <label class="form-check-label" for="salarioSuperior">El salario es superior</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="salarioIgual" value="salarioIgual" name="salarioprop">
-              <label class="form-check-label" for="salarioIgual">El salario se aproxima o es igual al actual</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="salarioMenor" value="salarioMenor" name="salarioprop">
-              <label class="form-check-label" for="salarioMenor">El salario disminuyó, pero con condiciones laborales diferentes</label>
-            </div>
+            <select name="salarioDif" id="salarioDif" class="form-control">
+              <option></option>
+              <option>El salario es superior</option>
+              <option>El salario se aproxima o es igual al actual</option>
+              <option>El salario disminuyó, pero con condiciones laborales diferentes</option>
+            </select>
 
           </div>
         </div>
+        <hr>
 
-        <!-- seccion -->
+        <!-- Pregunta -->
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><strong>Que tan satisfecho se siente con la labor que realizó en Heon</strong></p>
-
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="satisfecho" name="satisfecho">
-              <label class="form-check-label" for="satisfecho">Completamente satisfecho</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="satisfecho" name="satisfecho">
-              <label class="form-check-label" for="satisfecho">Satisfecho</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="satisfecho" name="satisfecho">
-              <label class="form-check-label" for="satisfecho">Insatisfecho</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="satisfecho" name="satisfecho">
-              <label class="form-check-label" for="satisfecho">Completamente Insatisfecho</label>
-            </div>
-
+            <p><strong>2. ¿Que tan satisfecho se siente con la labor que realizó en Heon?</strong></p>
+            <select class="form-control" name="" id="satisfecho">
+              <option></option>
+              <option>Completamente satisfecho</option>
+              <option>Satisfecho</option>
+              <option>Insatisfecho</option>
+              <option>Completamente Insatisfecho</option>
+            </select>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p>Mencione cuáles son los factores por mejorar en la organización  </p>
+            <p><strong>3. Mencione cuáles son los factores por mejorar en la organización </strong> </p>
             <textarea class="form-control" id="factPositivos"  rows="1"  name="factPositivos"></textarea>
           </div>
           <div class="form-group col-md-12">
-            <p>b.	Mencione cuáles son los aspectos positivos en la organización  </p>
+            <p><strong>4.	Mencione cuáles son los aspectos positivos en la organización </strong> </p>
             <textarea class="form-control" id="factNegativos"  rows="1" name="factNegativos"></textarea>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><strong>De acuerdo con su experiencia laboral en Heon ¿Se presentó oportunidad de crecimiento laboral?</strong></p>
+            <p><strong>5. De acuerdo con su experiencia laboral en Heon ¿Se presentó oportunidad de crecimiento laboral?</strong></p>
 
 
             <div class="form-check form-check-inline">
@@ -441,7 +397,9 @@
           </div>
         </div>
 <!-- SECCION -->
+<p><strong>6. ¿Cuáles de los beneficios que ofrece Heon a sus colaboradores usted utilizó?</strong></p><br>
         <div class="form-row">
+
           <div class="form-group col-md-6">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="exequial"  name="exequial" value="Seguro de asistencia exequial">
@@ -517,7 +475,7 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="asesoria"  name="asesoría" value="asesoria">
+              <input class="form-check-input" type="checkbox" id="asesoria"  name="asesoria" value="asesoria">
               <label class="form-check-label" for="asesoria">
                 Asesoría legal o psicológica
               </label>
@@ -581,27 +539,20 @@
               <textarea class="form-control" id="opinion"  rows="1" name="opinion"></textarea>
           </div>
         </div>
+        <hr>
 
         <!-- seccion -->
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><strong>La relación interpersonal entre jefe y colaboradores se desarrolló en un ambiente de apoyo y retroalimentación clara y oportuna para la realización de su trabajo</strong></p>
+            <p><strong>7. La relación interpersonal entre jefe y colaboradores se desarrolló en un ambiente de apoyo y retroalimentación clara y oportuna para la realización de su trabajo</strong></p>
 
 
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="interpersonales" name="interpersonales">
-              <label class="form-check-label" for="interpersonales">Si. Siempre</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="interpersonales" name="interpersonales">
-              <label class="form-check-label" for="interpersonales">Si. Algunas veces</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="interpersonales" name="interpersonales">
-              <label class="form-check-label" for="interpersonales">No. Nunca</label>
-            </div>
+            <select id="fisicas" name="interpersonales" class="form-control">
+              <option></option>
+              <option>Si, Siempre</option>
+              <option>Si, Algunas veces</option>
+              <option>No, Nunca</option>
+            </select>
 
           </div>
         </div>
@@ -610,22 +561,12 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <p><strong>8.	Recibió reconocimiento por parte de su jefe inmediato por los resultados obtenidos</strong></p>
-
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="reconocimientoJefe" name="reconocimientoJefe">
-              <label class="form-check-label" for="reconocimientoJefe">Si. Siempre</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="reconocimientoJefe" name="reconocimientoJefe">
-              <label class="form-check-label" for="reconocimientoJefe">Si. Algunas veces</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="reconocimientoJefe" name="reconocimientoJefe">
-              <label class="form-check-label" for="reconocimientoJefe">No. Nunca</label>
-            </div>
+            <select id="fisicas" name="reconocimientoJefe" class="form-control">
+              <option></option>
+              <option>Si, Siempre</option>
+              <option>Si, Algunas veces</option>
+              <option>No, Nunca</option>
+            </select>
 
           </div>
         </div>
@@ -633,28 +574,16 @@
         <!-- seccion -->
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><strong>Considera que las relaciones interpersonales entre compañeros de trabajo se desarrollan en un ambiente de compañerismo y trabajo en equipo</strong></p>
+            <p><strong>9. Considera que las relaciones interpersonales entre compañeros de trabajo se desarrollan en un ambiente de compañerismo y trabajo en equipo</strong></p>
 
 
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="ambiente" name="ambiente">
-              <label class="form-check-label" for="ambiente">Excelente</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="ambiente" name="ambiente">
-              <label class="form-check-label" for="ambiente">Buena</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="ambiente" name="ambiente">
-              <label class="form-check-label" for="ambiente">Regular</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="ambiente" name="ambiente">
-              <label class="form-check-label" for="ambiente">Mala</label>
-            </div>
+            <select id="fisicas" name="ambiente" class="form-control">
+              <option></option>
+              <option>Excelente</option>
+              <option>Buena</option>
+              <option>Regular</option>
+              <option>Mala</option>
+            </select>
 
           </div>
         </div>
@@ -662,18 +591,14 @@
         <!-- seccion -->
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><strong>Como consideran que fueron las capacitaciones que ofrece Heon a sus colaboradores</strong></p>
+            <p><strong>10. Como consideran que fueron las capacitaciones que ofrece Heon a sus colaboradores</strong></p>
 
 
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="capacitaciones" name="capacitaciones">
-              <label class="form-check-label" for="capacitaciones">Suficiente</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="capacitaciones" name="capacitaciones">
-              <label class="form-check-label" for="capacitaciones">Insuficiente</label>
-            </div>
+            <select id="fisicas" name="capacitaciones" class="form-control">
+              <option></option>
+              <option>Suficiente</option>
+              <option>Insuficiente</option>
+            </select>
 
           </div>
         </div>
@@ -688,18 +613,14 @@
         <!-- seccion -->
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><strong>Como consideran que fueron las actividades de bienestar que ofrece Heon a sus colaboradores</strong></p>
+            <p><strong>11. Como consideran que fueron las actividades de bienestar que ofrece Heon a sus colaboradores</strong></p>
 
 
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="bienestar" name="bienestar">
-              <label class="form-check-label" for="bienestar">Suficiente</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="bienestar" name="bienestar">
-              <label class="form-check-label" for="bienestar">Insuficiente</label>
-            </div>
+            <select id="fisicas" name="bienestar" class="form-control">
+              <option></option>
+              <option>Suficiente</option>
+              <option>Insuficiente</option>
+            </select>
 
           </div>
         </div>
@@ -714,35 +635,22 @@
         <!-- seccion -->
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><strong>Que tan satisfecho estuvo con las condiciones físicas del ambiente en que desarrollo su trabajo</strong></p>
+            <p><strong>12. Que tan satisfecho estuvo con las condiciones físicas del ambiente en que desarrollo su trabajo</strong></p>
 
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="fisicas" name="fisicas">
-              <label class="form-check-label" for="fisicas">Completamente satisfecho</label>
+              <select id="fisicas" name="fisicas" class="form-control">
+                <option></option>
+                <option>Completamente satisfecho</option>
+                <option>Satisfecho</option>
+                <option>Insatisfecho</option>
+                <option>Completamente Insatisfecho</option>
+              </select>
             </div>
 
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="fisicas" name="fisicas">
-              <label class="form-check-label" for="fisicas">Satisfecho</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="fisicas" name="fisicas">
-              <label class="form-check-label" for="fisicas">Insatisfecho</label>
-            </div>
-
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="fisicas" name="fisicas">
-              <label class="form-check-label" for="fisicas">Completamente Insatisfecho</label>
-            </div>
-
-          </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><strong>Recomendaría a Heon como un buen lugar para trabajar.</strong></p>
+            <p><strong>13. Recomendaría a Heon como un buen lugar para trabajar.</strong></p>
 
 
             <div class="form-check form-check-inline">
@@ -763,15 +671,12 @@
 
         <div class="form-row">
           <div class="form-group col-md-12">
-          <p><strong>Para Finalizar, desea realizar una observación o sugerencia sobre algún tema en específico.</strong></p>
+          <p><strong>14. Para Finalizar, desea realizar una observación o sugerencia sobre algún tema en específico.</strong></p>
           <textarea class="form-control" id="sugerenciaFin"  rows="1" name="sugerenciaFin"></textarea>
           </div>
 
           <input type="submit" class="btn btn-success " value="enviar">
         </div>
-
-
-
 
       </form>
 
