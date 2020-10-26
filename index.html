@@ -137,7 +137,7 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Nivel Academico</label>
-            <select class="form-control" id="nivel"  name="nivel">
+            <select class="form-control" id="nivelAcademico"  name="nivelAcademico">
               <option>Primaria</option>
               <option>Secundaria</option>
               <option>Pregrado</option>
@@ -147,18 +147,18 @@
           </div>
           <div class="form-group col-md-6">
             <label>Jefe Inmediato</label>
-            <input type="text" class="form-control" id="jefe"  name="jefe">
+            <input type="text" class="form-control" id="jefeInmediato"  name="jefeInmediato">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Fecha de Ingreso</label>
-            <input type="date" class="form-control" id="ingreso"  name="ingreso">
+            <input type="date" class="form-control" id="fechaIngreso"  name="fechaIngreso">
           </div>
           <div class="form-group col-md-6">
             <label>Fecha de Retiro</label>
-            <input type="date" class="form-control" id="retiro"  name="retiro">
+            <input type="date" class="form-control" id="fechaRetiro"  name="fechaRetiro">
           </div>
         </div>
         <hr>  
@@ -181,22 +181,22 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="motivosP"  name="motivosP" value="motivosP">
-              <label class="form-check-label" for="motivosP">
+              <input class="form-check-input" type="checkbox" id="motivosPersonales"  name="motivosPersonales" value="motivosPersonales">
+              <label class="form-check-label" for="motivosPersonales">
                 Motivos Personales
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="motivacion"  name="motivacion" value="motivacion">
-              <label class="form-check-label" for="motivacion">
+              <input class="form-check-input" type="checkbox" id="faltaMotivacion"  name="faltaMotivacion" value="faltaMotivacion">
+              <label class="form-check-label" for="faltaMotivacion">
                 Falta de Motivación
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="horario"  name="horario" value="horario">
-              <label class="form-check-label" for="horario">
+              <input class="form-check-input" type="checkbox" id="horarioLaboral"  name="horarioLaboral" value="horario">
+              <label class="form-check-label" for="horarioLaboral">
                 Horario Laboral
               </label>
             </div>
@@ -209,8 +209,8 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="carga"  name="carga" value="carga">
-              <label class="form-check-label" for="carga">
+              <input class="form-check-input" type="checkbox" id="cargaLaboral"  name="cargaLaboral" value="cargaLaboral">
+              <label class="form-check-label" for="cargaLaboral">
                 Carga Laboral
               </label>
             </div>
@@ -223,15 +223,15 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="relCompaneros"  name="relCompaneros"  value="relCompaneros">
-              <label class="form-check-label" for="relCompaneros">
+              <input class="form-check-input" type="checkbox" id="relInterCompaneros"  name="relInterCompaneros"  value="relInterCompaneros">
+              <label class="form-check-label" for="relInterCompaneros">
                 Relaciones interpersonales con los compañeros de trabajo
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="relJefe"  name="relJefe"  value="relJefe">
-              <label class="form-check-label" for="relJefe">
+              <input class="form-check-input" type="checkbox" id="relInterJefe"  name="relInterJefe"  value="relInterJefe">
+              <label class="form-check-label" for="relInterJefe">
                 Relaciones interpersonales con el jefe inmediato
               </label>
             </div>
@@ -240,8 +240,8 @@
           <div class="form-group col-md-6">
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="relCliente"  name="relCliente"  value="relCliente">
-              <label class="form-check-label" for="relCliente">
+              <input class="form-check-input" type="checkbox" id="relInterCliente"  name="relInterCliente"  value="relInterCliente">
+              <label class="form-check-label" for="relInterCliente">
                 Relaciones interpersonales con el cliente
               </label>
             </div>
@@ -254,15 +254,15 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="ambFisico"  name="ambFisico" value="ambFisico">
-              <label class="form-check-label" for="ambFisico">
+              <input class="form-check-input" type="checkbox" id="ambienteFisico"  name="ambienteFisico" value="ambienteFisico">
+              <label class="form-check-label" for="ambienteFisico">
                 Ambiente físico
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="proFamiliares"  name="proFamiliares"  value="proFamiliares">
-              <label class="form-check-label" for="proFamiliares">
+              <input class="form-check-input" type="checkbox" id="problFamiliares"  name="problFamiliares"  value="problFamiliares">
+              <label class="form-check-label" for="problFamiliares">
                 Problemas familiares
               </label>
             </div>
@@ -275,8 +275,8 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="expectativas"  name="expectativas"  value="expectativas">
-              <label class="form-check-label" for="expectativas">
+              <input class="form-check-input" type="checkbox" id="noCumpleExpecta"  name="noCumpleExpecta"  value="noCumpleExpecta">
+              <label class="form-check-label" for="noCumpleExpecta">
                 No cumplió sus expectativas
               </label>
             </div>
@@ -289,8 +289,8 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="salud"  name="salud" value="salud">
-              <label class="form-check-label" for="salud">
+              <input class="form-check-input" type="checkbox" id="problemSalud"  name="problemSalud" value="problemSalud">
+              <label class="form-check-label" for="problemSalud">
                 Problemas de Salud
               </label>
             </div>
@@ -312,6 +312,10 @@
         </div>
         <hr>
 
+
+
+
+
         <div class="form-row">
           <div id="preg13" class="form-group col-md-12 d-none">
             <p><strong>Teniendo en cuenta que uno de los Motivos fue: Mejor Oportunidad Laboral, agradecemos seleccionar una de las siguientes opciones y responder:</strong></p>
@@ -331,14 +335,12 @@
         </div>
         <hr>
 
-
-
        <!-- pregunta -->
         <div class="form-row">
           <div id="preg14" class="form-group col-md-12 d-none">
             <p><strong>Teniendo en cuenta que uno de los Motivos fue Remuneración/Salario, agradecemos seleccionar una de las siguientes opciones y responder:</strong></p>
 
-            <select name="salarioDif" id="salarioDif" class="form-control">
+            <select name="rtaSalario" id="rtaSalario" class="form-control">
               <option></option>
               <option>El salario es superior</option>
               <option>El salario se aproxima o es igual al actual</option>
@@ -353,7 +355,7 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <p><strong>2. ¿Que tan satisfecho se siente con la labor que realizó en Heon?</strong></p>
-            <select class="form-control" name="" id="satisfecho">
+            <select class="form-control" name="satisfecho" id="satisfecho">
               <option></option>
               <option>Completamente satisfecho</option>
               <option>Satisfecho</option>
@@ -366,11 +368,11 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <p><strong>3. Mencione cuáles son los factores por mejorar en la organización </strong> </p>
-            <textarea class="form-control" id="factPositivos"  rows="1"  name="factPositivos"></textarea>
+            <textarea class="form-control" id="factmejora"  rows="1"  name="factmejora"></textarea>
           </div>
           <div class="form-group col-md-12">
             <p><strong>4.	Mencione cuáles son los aspectos positivos en la organización </strong> </p>
-            <textarea class="form-control" id="factNegativos"  rows="1" name="factNegativos"></textarea>
+            <textarea class="form-control" id="aspecPos"  rows="1" name="aspecPos"></textarea>
           </div>
         </div>
 
@@ -380,18 +382,18 @@
 
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="crecimiento" name="crecimiento">
-              <label class="form-check-label" for="crecimiento">SI</label>
+              <input class="form-check-input" type="radio" id="opCrecLaboral" name="opCrecLaboral">
+              <label class="form-check-label" for="opCrecLaboral">SI</label>
             </div>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="crecimiento" name="crecimiento">
-              <label class="form-check-label" for="crecimiento">NO</label>
+              <input class="form-check-input" type="radio" id="opCrecLaboral" name="opCrecLaboral">
+              <label class="form-check-label" for="opCrecLaboral">NO</label>
             </div>
 
             
               <p>Argumente su respuesta  </p>
-              <textarea class="form-control" id="argumento"  rows="1" name="argumento"></textarea>
+              <textarea class="form-control" id="argCrecLaboral"  rows="1" name="argCrecLaboral"></textarea>
             
 
           </div>
@@ -402,8 +404,8 @@
 
           <div class="form-group col-md-6">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="exequial"  name="exequial" value="Seguro de asistencia exequial">
-              <label class="form-check-label" for="exequial">
+              <input class="form-check-input" type="checkbox" id="seguroExequial"  name="seguroExequial" value="Seguro de asistencia exequial">
+              <label class="form-check-label" for="seguroExequial">
                 Seguro de asistencia exequial
               </label>
             </div>
@@ -416,22 +418,22 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="seguro" name="seguro" value="Seguro de vida">
-              <label class="form-check-label" for="seguro">
+              <input class="form-check-input" type="checkbox" id="seguroVida" name="seguroVida" value="Seguro de vida">
+              <label class="form-check-label" for="seguroVida">
                 Seguro de vida
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="matrimonio"  name="matrimonio" value="Permiso de matrimonio">
-              <label class="form-check-label" for="matrimonio">
+              <input class="form-check-input" type="checkbox" id="perMatrimonio"  name="perMatrimonio" value="Permiso de matrimonio">
+              <label class="form-check-label" for="perMatrimonio">
                 Permiso de matrimonio                                               
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="grado" name="grado" value="Permiso para asistir a ceremonias de grado">
-              <label class="form-check-label" for="grado">
+              <input class="form-check-input" type="checkbox" id="perGrado" name="perGrado" value="Permiso para asistir a ceremonias de grado">
+              <label class="form-check-label" for="perGrado">
                 Permiso para asistir a ceremonias de grado
               </label>
             </div>
@@ -451,15 +453,15 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="reconocimiento"  name="reconocimiento" value="Reconocimiento mensual">
-              <label class="form-check-label" for="reconocimiento">
+              <input class="form-check-input" type="checkbox" id="reconMensual"  name="reconMensual" value="Reconocimiento mensual">
+              <label class="form-check-label" for="reconMensual">
                 Reconocimiento mensual
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="cumpleanos"  name="cumpleanos" value="Detalle de cumpleaños">
-              <label class="form-check-label" for="cumpleanos">
+              <input class="form-check-input" type="checkbox" id="detalleCumple"  name="detalleCumple" value="Detalle de cumpleaños">
+              <label class="form-check-label" for="detalleCumple">
                 Detalle de cumpleaños
               </label>
             </div>
@@ -468,15 +470,15 @@
           <div class="form-group col-md-6">
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="nacimiento"  name="nacimiento" value="nacimiento">
-              <label class="form-check-label" for="nacimiento">
+              <input class="form-check-input" type="checkbox" id="perMadreHijo"  name="perMadreHijo" value="nacimiento">
+              <label class="form-check-label" for="perMadreHijo">
                 Permiso de la madre por nacimiento de su hijo
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="asesoria"  name="asesoria" value="asesoria">
-              <label class="form-check-label" for="asesoria">
+              <input class="form-check-input" type="checkbox" id="asesLegalPsico"  name="asesLegalPsico" value="asesLegalPsico">
+              <label class="form-check-label" for="asesLegalPsico">
                 Asesoría legal o psicológica
               </label>
             </div>
@@ -489,36 +491,36 @@
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="vestir"  name="vestir" value="vestir">
-              <label class="form-check-label" for="vestir">
+              <input class="form-check-input" type="checkbox" id="vestuario"  name="vestuario" value="vestuario">
+              <label class="form-check-label" for="vestuario">
                 Flexibilidad en política del buen vestir
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="diaCumpleanos"  name="diaCumpleanos" value="diaCumpleanos">
-              <label class="form-check-label" for="diaCumpleanos">
+              <input class="form-check-input" type="checkbox" id="diaCumple"  name="diaCumple" value="diaCumpleanos">
+              <label class="form-check-label" for="diaCumple">
                 Medio día de cumpleaños  
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="diligencias" name="diligencias" value="diligencias">
-              <label class="form-check-label" for="diligencias">
+              <input class="form-check-input" type="checkbox" id="perDilPerso" name="perDilPerso" value="diligencias">
+              <label class="form-check-label" for="perDilPerso">
                 Permisos para diligencias personales
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="nacimientoPadre"  name="nacimientoPadre" value="nacimientoPadre">
-              <label class="form-check-label" for="nacimientoPadre">
+              <input class="form-check-input" type="checkbox" id="perPadreHijo"  name="perPadreHijo" value="perPadreHijo">
+              <label class="form-check-label" for="perPadreHijo">
                 Permiso del padre por nacimiento de su hijo
               </label>
             </div>
 
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="universidades"  name="universidades" value="universidades">
-              <label class="form-check-label" for="universidades">
+              <input class="form-check-input" type="checkbox" id="convUniver"  name="convUniver" value="convUniver">
+              <label class="form-check-label" for="convUniver">
                 Convenios con universidades
               </label>
             </div>
@@ -536,7 +538,7 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <p>¿Qué opinión tiene sobre los beneficios? </p>
-              <textarea class="form-control" id="opinion"  rows="1" name="opinion"></textarea>
+              <textarea class="form-control" id="opinBenefi"  rows="1" name="opinBenefi"></textarea>
           </div>
         </div>
         <hr>
@@ -547,7 +549,7 @@
             <p><strong>7. La relación interpersonal entre jefe y colaboradores se desarrolló en un ambiente de apoyo y retroalimentación clara y oportuna para la realización de su trabajo</strong></p>
 
 
-            <select id="fisicas" name="interpersonales" class="form-control">
+            <select id="relJefeColab" name="relJefeColab" class="form-control">
               <option></option>
               <option>Si, Siempre</option>
               <option>Si, Algunas veces</option>
@@ -561,7 +563,7 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <p><strong>8.	Recibió reconocimiento por parte de su jefe inmediato por los resultados obtenidos</strong></p>
-            <select id="fisicas" name="reconocimientoJefe" class="form-control">
+            <select id="reconJefe" name="reconJefe" class="form-control">
               <option></option>
               <option>Si, Siempre</option>
               <option>Si, Algunas veces</option>
@@ -577,7 +579,7 @@
             <p><strong>9. Considera que las relaciones interpersonales entre compañeros de trabajo se desarrollan en un ambiente de compañerismo y trabajo en equipo</strong></p>
 
 
-            <select id="fisicas" name="ambiente" class="form-control">
+            <select id="relCompaneros" name="relCompaneros" class="form-control">
               <option></option>
               <option>Excelente</option>
               <option>Buena</option>
@@ -594,7 +596,7 @@
             <p><strong>10. Como consideran que fueron las capacitaciones que ofrece Heon a sus colaboradores</strong></p>
 
 
-            <select id="fisicas" name="capacitaciones" class="form-control">
+            <select id="capacitaciones" name="capacitaciones" class="form-control">
               <option></option>
               <option>Suficiente</option>
               <option>Insuficiente</option>
@@ -606,7 +608,7 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <p>Argumente su respuesta </p>
-              <textarea class="form-control" id=""  rows="1"></textarea>
+              <textarea class="form-control" id="argCapacit"  rows="1" name="argCapacit"></textarea>
           </div>
         </div>
 
@@ -616,7 +618,7 @@
             <p><strong>11. Como consideran que fueron las actividades de bienestar que ofrece Heon a sus colaboradores</strong></p>
 
 
-            <select id="fisicas" name="bienestar" class="form-control">
+            <select id="actBienestar" name="actBienestar" class="form-control">
               <option></option>
               <option>Suficiente</option>
               <option>Insuficiente</option>
@@ -628,7 +630,7 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <p>Argumente su respuesta </p>
-              <textarea class="form-control" id=""  rows="1"></textarea>
+              <textarea class="form-control" id=""  rows="1" name="argBienestar"></textarea>
           </div>
         </div>
 
@@ -637,7 +639,7 @@
           <div class="form-group col-md-12">
             <p><strong>12. Que tan satisfecho estuvo con las condiciones físicas del ambiente en que desarrollo su trabajo</strong></p>
 
-              <select id="fisicas" name="fisicas" class="form-control">
+              <select id="condFisicas" name="condFisicas" class="form-control">
                 <option></option>
                 <option>Completamente satisfecho</option>
                 <option>Satisfecho</option>
@@ -654,13 +656,13 @@
 
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="recomendar" name="recomendar">
-              <label class="form-check-label" for="recomendar">SI</label>
+              <input class="form-check-input" type="radio" id="recomienda" name="recomienda">
+              <label class="form-check-label" for="recomienda">SI</label>
             </div>
 
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" id="recomendar" name="recomendar">
-              <label class="form-check-label" for="recomendar">NO</label>
+              <input class="form-check-input" type="radio" id="recomienda" name="recomienda">
+              <label class="form-check-label" for="recomienda">NO</label>
             </div>
 
               <p>¿Por que? </p>
@@ -672,7 +674,7 @@
         <div class="form-row">
           <div class="form-group col-md-12">
           <p><strong>14. Para Finalizar, desea realizar una observación o sugerencia sobre algún tema en específico.</strong></p>
-          <textarea class="form-control" id="sugerenciaFin"  rows="1" name="sugerenciaFin"></textarea>
+          <textarea class="form-control" id="observacion"  rows="1" name="observacion"></textarea>
           </div>
 
           <input type="submit" class="btn btn-success " value="enviar">

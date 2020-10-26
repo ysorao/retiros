@@ -2,153 +2,231 @@
 
 include_once('conexion.php');
 
-if($_POST){
 
-    $nombre = $_POST['nombre'];
-    $documento = $_POST['documento'];
-    $cargo = $_POST['cargo'];
-    $sede = $_POST['sede'];
-    $area = $_POST['area'];
-    $estadoCivil = $_POST['estadoCivil'];
-    $sexo = $_POST['sexo'];
-    $nivel = $_POST['nivel'];
-    $jefe = $_POST['jefe'];
-    $ingreso = $_POST['ingreso'];
-    $retiro = $_POST['retiro'];
-    $independizarse = $_POST['independizarse'];
-    $motivosP = $_POST['motivosP'];
-    $motivacion = $_POST['motivacion'];
-    $horario = $_POST['horario'];
-    $cambioCiudad = $_POST['cambioCiudad'];
-    $carga = $_POST['carga'];
-    $cambioResidencia = $_POST['cambioResidencia'];
-    $relCompaneros = $_POST['relCompaneros'];
-    $relJefe = $_POST['relJefe'];
-    $relCliente = $_POST['relCliente'];
-    $oportunidad = $_POST['oportunidad'];
-    $ambFisico = $_POST['ambFisico'];
-    $proFamiliares = $_POST['proFamiliares'];
-    $estudios = $_POST['estudios'];
-    $expectativas = $_POST['expectativas'];
-    $salario = $_POST['salario'];
-    $salud = $_POST['salud'];
-    $otro = $_POST['otro'];
-    $cual = $_POST['cual'];
-    $mejorOferta = $_POST['mejorOferta'];
-    $porqueOferta = $_POST['porqueOferta'];
-    $ofertaBusqueda = $_POST['ofertaBusqueda'];
-    $motivoBusqueda = $_POST['motivoBusqueda'];
-    $ofertaOtro = $_POST['ofertaOtro'];
-    $ofertaCual = $_POST['ofertaCual'];
-    $salarioProp = $_POST['salarioprop'];
-    $satisfecho = $_POST['satisfecho'];
-    $factPositivos = $_POST['factPositivos'];
-    $factNegativos = $_POST['factNegativos'];
-    $crecimiento = $_POST['crecimiento'];
-    $exequial = $_POST['exequial'];
-    $areaProtegida = $_POST['areaProtegida'];
-    $seguro = $_POST['seguro'];
-    $matrimonio = $_POST['matrimonio'];
-    $grado = $_POST['grado'];
-    $voluntariado = $_POST['voluntariado'];
-    $diaHijos = $_POST['diaHijos'];
-    $reconocimiento = $_POST['reconocimiento'];
-    $cumpleanos = $_POST['cumpleanos'];
-    $nacimiento = $_POST['nacimiento'];
-    $asesoria = $_POST['asesoria'];
-    $gimnasio = $_POST['gimnasio'];
-    $vestir = $_POST['vestir'];
-    $diaCumpleanos = $_POST['diaCumpleanos'];
-    $diligencias = $_POST['diligencias'];
-    $nacimientoPadre = $_POST['nacimientoPadre'];
-    $universidades = $_POST['universidades'];
-    $concesionarios = $_POST['concesionarios'];
-    $opinion = $_POST['opinion'];
-    $interpersonales = $_POST['interpersonales'];
-    $reconocimientoJefe = $_POST['reconocimientoJefe'];
-    $ambiente = $_POST['ambiente'];
-    $capacitaciones = $_POST['capacitaciones'];
-    $bienestar = $_POST['bienestar'];
-    $fisicas = $_POST['fisicas'];
-    $recomendar = $_POST['recomendar'];
-    $porque = $_POST['porque'];
-    $sugerenciaFin = $_POST['sugerenciaFin'];
-    $fecha = date('Y-m-d H:i:s');
-
-}
+$nombre=$_POST['nombre'];
+$documento =$_POST['documento'];
+$cargo =$_POST['cargo'];
+$sede =$_POST['sede'];
+$area =$_POST['area'];
+$estadoCivil =$_POST['estadoCivil'];
+$sexo =$_POST['sexo'];
+$nivelAcademico =$_POST['nivelAcademico'];
+$jefeInmediato =$_POST['jefeInmediato'];
+$fechaIngreso =$_POST['fechaIngreso'];
+$fechaRetiro =$_POST['fechaRetiro'];
+$independizarse =$_POST['independizarse'];
+$motivosPersonales =$_POST['motivosPersonales'];
+$faltaMotivacion =$_POST['faltaMotivacion'];
+$horarioLaboral =$_POST['horarioLaboral'];
+$cambioCiudad =$_POST['cambioCiudad'];
+$cargaLaboral =$_POST['cargaLaboral'];
+$cambioResidencia =$_POST['cambioResidencia'];
+$relInterCompaneros =$_POST['relInterCompaneros'];
+$relInterJefe =$_POST['relInterJefe'];
+$relInterCliente =$_POST['relInterCliente'];
+$oportunidad =$_POST['oportunidad'];
+$ambienteFisico =$_POST['ambienteFisico'];
+$ProblFamiliares =$_POST['problFamiliares'];
+$estudios =$_POST['estudios'];
+$noCumpleExpecta =$_POST['noCumpleExpecta'];
+$salario =$_POST['salario'];
+$problemSalud =$_POST['problemSalud'];
+$otro =$_POST['otro'];
+$cual =$_POST['cual'];
+$mejorOferta =$_POST['mejorOferta'];
+$porqueOferta =$_POST['porqueOferta'];
+$rtaSalario =$_POST['rtaSalario'];
+$satisfecho =$_POST['satisfecho'];
+$factmejora =$_POST['factmejora'];
+$aspecPos =$_POST['aspecPos'];
+$opCrecLaboral =$_POST['opCrecLaboral'];
+$argCrecLaboral =$_POST['argCrecLaboral'];
+$seguroExequial =$_POST['seguroExequial'];
+$areaProtegida =$_POST['areaProtegida'];
+$seguroVida =$_POST['seguroVida'];
+$perMatrimonio =$_POST['perMatrimonio'];
+$perGrado =$_POST['perGrado'];
+$voluntariado =$_POST['voluntariado'];
+$diaHijos =$_POST['diaHijos'];
+$reconMensual =$_POST['reconMensual'];
+$detalleCumple =$_POST['detalleCumple'];
+$perMadreHijo =$_POST['perMadreHijo'];
+$asesLegalPsico =$_POST['asesLegalPsico'];
+$gimnasio =$_POST['gimnasio'];
+$vestuario =$_POST['vestuario'];
+$diaCumple =$_POST['diaCumple'];
+$perDilPerso =$_POST['perDilPerso'];
+$perPadreHijo =$_POST['perPadreHijo'];
+$convUniver =$_POST['convUniver'];
+$concesionarios =$_POST['concesionarios'];
+$opinBenefi =$_POST['opinBenefi'];
+$relJefeColab =$_POST['relJefeColab'];
+$reconJefe =$_POST['reconJefe'];
+$relCompaneros =$_POST['relCompaneros'];
+$capacitaciones =$_POST['capacitaciones'];
+$argCapacit =$_POST['argCapacit'];
+$actBienestar =$_POST['actBienestar'];
+$argBienestar =$_POST['argBienestar'];
+$condFisicas =$_POST['condFisicas'];
+$recomienda =$_POST['recomienda'];
+$porque =$_POST['porque'];
+$observacion =$_POST['observacion'];
+$fechaDil = date('Y-m-d H:i');
+$estado = 'diligenciado';
 
 
 
 
 
-echo $nombre.'<br>'.
-$documento.'<br>'.
-$cargo.'<br>'.
-$sede.'<br>'.
-$area.'<br>'.
-$estadoCivil.'<br>'.
-$sexo.'<br>'.
-$nivel.'<br>'.
-$jefe.'<br>'.
-$ingreso.'<br>'.
-$retiro.'<br>'.
-$independizarse.'<br>'.
-$motivosP.'<br>'.
-$motivacion.'<br>'.
-$horario.'<br>'.
-$cambioCiudad.'<br>'.
-$carga.'<br>'.
-$cambioResidencia.'<br>'.
-$relCompaneros.'<br>'.
-$relJefe.'<br>'.
-$relCliente.'<br>'.
-$oportunidad.'<br>'.
-$ambFisico.'<br>'.
-$proFamiliares.'<br>'.
-$estudios.'<br>'.
-$expectativas.'<br>'.
-$salario.'<br>'.
-$salud.'<br>'.
-$otro.'<br>'.
-$cual.'<br>'.
-$mejorOferta.'<br>'.
-$porqueOferta.'<br>'.
-$ofertaBusqueda.'<br>'.
-$motivoBusqueda.'<br>'.
-$ofertaOtro.'<br>'.
-$ofertaCual.'<br>'.
-$salarioProp.'<br>'.
-$satisfecho.'<br>'.
-$factPositivos.'<br>'.
-$factNegativos.'<br>'.
-$crecimiento.'<br>'.
-$exequial.'<br>'.
-$areaProtegida.'<br>'.
-$seguro.'<br>'.
-$matrimonio.'<br>'.
-$grado.'<br>'.
-$voluntariado.'<br>'.
-$diaHijos.'<br>'.
-$reconocimiento.'<br>'.
-$cumpleanos.'<br>'.
-$nacimiento.'<br>'.
-$asesoria.'<br>'.
-$gimnasio.'<br>'.
-$vestir.'<br>'.
-$diaCumpleanos.'<br>'.
-$diligencias.'<br>'.
-$nacimientoPadre.'<br>'.
-$universidades.'<br>'.
-$concesionarios.'<br>'.
-$opinion.'<br>'.
-$interpersonales.'<br>'.
-$reconocimientoJefe.'<br>'.
-$ambiente.'<br>'.
-$capacitaciones.'<br>'.
-$bienestar.'<br>'.
-$fisicas.'<br>'.
-$recomendar.'<br>'.
-$porque.'<br>'.
-$sugerenciaFin.'<br>';
+
+
+
+$sql = sqlsrv_query($conexion,
+  "INSERT INTO retiro_encuesta
+(
+nombre,
+documento,
+cargo,
+sede,
+area,
+estadoCivil,
+sexo,
+nivelAcademico,
+JefeInmediato,
+fechaIngreso,
+fechaRetiro,
+independizarse,
+motivosPersonales,
+faltaMovivacion,
+horarioLaboral,
+cambioCiudad,
+cargaLaboral,
+cambioResidencia,
+relInterCompaneros,
+renInterJefe,
+relInterCliente,
+oportunidad,
+ambienteFisico,
+ProblFamiliares,
+estudios,
+noCumpleExpecta,
+salario,
+problemSalud,
+otro,
+cual,
+rtaMejOpLab,
+porqueOferta,
+rtaSalario,
+satisfecho,
+factmejora,
+aspecPos,
+opCrecLaboral,
+argCrecLaboral,
+seguroExequial,
+areaProtegida,
+seguroVida,
+perMatrimonio,
+PerGrado,
+voluntariado,
+diaHijos,
+ReconMensual,
+detalleCumple,
+perMadreHijo,
+asesLegalPsico,
+gimnasio,
+vestuario,
+diaCumple,
+perDilPerso,
+perPadreHijo,
+convUniver,
+concesionarios,
+opinBenefi,
+reljefeColab,
+reconJefe,
+relCompaneros,
+capacitaciones,
+argCapacit,
+actBienestar,
+argBienestar,
+condFisicas,
+recomienda,
+porque,
+observacion,
+fechaDil,
+estado
+) 
+           VALUES
+(
+'$nombre',
+'$documento',
+'$cargo',
+'$sede',
+'$area',
+'$estadoCivil',
+'$sexo',
+'$nivelAcademico',
+'$jefeInmediato',
+'$fechaIngreso',
+'$fechaRetiro',
+'$independizarse',
+'$motivosPersonales',
+'$faltaMotivacion',
+'$horarioLaboral',
+'$cambioCiudad',
+'$cargaLaboral',
+'$cambioResidencia',
+'$relInterCompaneros',
+'$relInterJefe',
+'$relInterCliente',
+'$oportunidad',
+'$ambienteFisico',
+'$ProblFamiliares',
+'$estudios',
+'$noCumpleExpecta',
+'$salario',
+'$problemSalud',
+'$otro',
+'$cual',
+'$mejorOferta',
+'$porqueOferta',
+'$rtaSalario',
+'$satisfecho',
+'$factmejora',
+'$aspecPos',
+'$opCrecLaboral',
+'$argCrecLaboral',
+'$seguroExequial',
+'$areaProtegida',
+'$seguroVida',
+'$perMatrimonio',
+'$perGrado',
+'$voluntariado',
+'$diaHijos',
+'$reconMensual',
+'$detalleCumple',
+'$perMadreHijo',
+'$asesLegalPsico',
+'$gimnasio',
+'$vestuario',
+'$diaCumple',
+'$perDilPerso',
+'$perPadreHijo',
+'$convUniver',
+'$concesionarios',
+'$opinBenefi',
+'$relJefeColab',
+'$reconJefe',
+'$relCompaneros',
+'$capacitaciones',
+'$argCapacit',
+'$actBienestar',
+'$argBienestar',
+'$condFisicas',
+'$recomienda',
+'$porque',
+'$observacion',
+'$fechaDil',
+'$estado'
+)");
 
 ?>
