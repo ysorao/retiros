@@ -10263,3 +10263,11 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.bg-formato{
+  background-color: #184c84;
+  color:#fff;
+}
+
+.ancol{
+  max-width: 20% !important;
+}

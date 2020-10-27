@@ -77,6 +77,87 @@ $estado = 'diligenciado';
 
 
 
+// echo $nombre.'<br>';
+// echo $documento.'<br>';
+// echo $cargo.'<br>';
+// echo $sede.'<br>';
+// echo $area.'<br>';
+// echo $estadoCivil.'<br>';
+// echo $sexo.'<br>';
+// echo $nivelAcademico.'<br>';
+// echo $jefeInmediato.'<br>';
+// echo $fechaIngreso.'<br>';
+// echo $fechaRetiro.'<br>';
+// echo $independizarse.'<br>';
+// echo $motivosPersonales.'<br>';
+// echo $faltaMotivacion.'<br>';
+// echo $horarioLaboral.'<br>';
+// echo $cambioCiudad.'<br>';
+// echo $cargaLaboral.'<br>';
+// echo $cambioResidencia.'<br>';
+// echo $relInterCompaneros.'<br>';
+// echo $relInterJefe.'<br>';
+// echo $relInterCliente.'<br>';
+// echo $oportunidad.'<br>';
+// echo $ambienteFisico.'<br>';
+// echo $ProblFamiliares.'<br>';
+// echo $estudios.'<br>';
+// echo $noCumpleExpecta.'<br>';
+// echo $salario.'<br>';
+// echo $problemSalud.'<br>';
+// echo $otro.'<br>';
+// echo $cual.'<br>';
+// echo $mejorOferta.'<br>';
+// echo $porqueOferta.'<br>';
+// echo $rtaSalario.'<br>';
+// echo $satisfecho.'<br>';
+// echo $factmejora.'<br>';
+// echo $aspecPos.'<br>';
+// echo $opCrecLaboral.'<br>';
+// echo $argCrecLaboral.'<br>';
+// echo $seguroExequial.'<br>';
+// echo $areaProtegida.'<br>';
+// echo $seguroVida.'<br>';
+// echo $perMatrimonio.'<br>';
+// echo $perGrado.'<br>';
+// echo $voluntariado.'<br>';
+// echo $diaHijos.'<br>';
+// echo $reconMensual.'<br>';
+// echo $detalleCumple.'<br>';
+// echo $perMadreHijo.'<br>';
+// echo $asesLegalPsico.'<br>';
+// echo $gimnasio.'<br>';
+// echo $vestuario.'<br>';
+// echo $diaCumple.'<br>';
+// echo $perDilPerso.'<br>';
+// echo $perPadreHijo.'<br>';
+// echo $convUniver.'<br>';
+// echo $concesionarios.'<br>';
+// echo $opinBenefi.'<br>';
+// echo $relJefeColab.'<br>';
+// echo $reconJefe.'<br>';
+// echo $relCompaneros.'<br>';
+// echo $capacitaciones.'<br>';
+// echo $argCapacit.'<br>';
+// echo $actBienestar.'<br>';
+// echo $argBienestar.'<br>';
+// echo $condFisicas.'<br>';
+// echo $recomienda.'<br>';
+// echo $porque.'<br>';
+// echo $observacion.'<br>';
+// echo $fechaDil.'<br>';
+// echo $estado;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -92,29 +173,29 @@ area,
 estadoCivil,
 sexo,
 nivelAcademico,
-JefeInmediato,
+jefeInmediato,
 fechaIngreso,
 fechaRetiro,
 independizarse,
 motivosPersonales,
-faltaMovivacion,
+faltaMotivacion,
 horarioLaboral,
 cambioCiudad,
 cargaLaboral,
 cambioResidencia,
 relInterCompaneros,
-renInterJefe,
+relInterJefe,
 relInterCliente,
 oportunidad,
 ambienteFisico,
-ProblFamiliares,
+problFamiliares,
 estudios,
 noCumpleExpecta,
 salario,
 problemSalud,
 otro,
 cual,
-rtaMejOpLab,
+mejorOferta,
 porqueOferta,
 rtaSalario,
 satisfecho,
@@ -126,10 +207,10 @@ seguroExequial,
 areaProtegida,
 seguroVida,
 perMatrimonio,
-PerGrado,
+perGrado,
 voluntariado,
 diaHijos,
-ReconMensual,
+reconMensual,
 detalleCumple,
 perMadreHijo,
 asesLegalPsico,
